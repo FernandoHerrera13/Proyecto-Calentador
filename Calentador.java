@@ -11,15 +11,31 @@ public class Calentador
     
     public void calentar()
     {
-        temperatura=temperatura+5;
-        System.out.println("La temperatura aumentó 5 grados");
-        System.out.println("La temperatura actual es de: "+temperatura + " grados");
+        if(temperatura<=30)
+        {
+           temperatura=temperatura+incremento;
+           System.out.println("La temperatura aumentó 3 grados");
+           System.out.println("La temperatura actual es de: "+temperatura + " grados");
+           
+            if(temperatura>=30)
+            {
+                System.out.println("Se ha llegado a la máxima temperatura permitida");
+            } 
+        }   
     }
     
     public void enfriar()
     {
-        temperatura=temperatura-5;
-        System.out.println("La temperatura disminuyó 5 grados");
-        System.out.println("La temperatura actual es de: "+temperatura + " grados");
+        if(temperatura>=-10)
+        {
+           temperatura=temperatura-incremento;
+           System.out.println("La temperatura disminuyó 3 grados");
+           System.out.println("La temperatura actual es de: "+temperatura + " grados");
+           
+            if(temperatura<-9)
+            {
+                System.out.println("Se ha llegado a la mínima temperatura permitida");
+            } 
+        }   
     }
 }
