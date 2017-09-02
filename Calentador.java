@@ -1,3 +1,4 @@
+/**Clase que nos permite simular un calentador: Aumentar o Disminuir la temperatura del mismo*/
 public class Calentador
 {
     private int temperatura;
@@ -9,6 +10,7 @@ public class Calentador
         incremento=3;
     }
     
+    /**Valida que sea menor a 30 y si lo es la va a incrementar de 3 en 3 hasta llegar a los 30 grados que es la temperatura maxima*/
     public void calentar()
     {
         if(temperatura<=30)
@@ -23,7 +25,7 @@ public class Calentador
             } 
         }   
     }
-    
+    /**Valida que sea mayor a -10 y si lo es la va a disminuir de 3 en 3 hasta llegar a los - 10 grados que es la temperatura minima*/
     public void enfriar()
     {
         if(temperatura>=-10)
